@@ -84,9 +84,6 @@ XGBoost achieved:
 	•	src/model_training.py
 	•	src/model_evaluation.py
 
-import pickle
-model = pickle.load(open("model/xgboost_final_model.sav", "rb"))
-pip install -r requirements.txt	
 ---
 
 ## 🎯 7. Selected Algorithm: XGBoost
