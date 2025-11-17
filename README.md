@@ -83,7 +83,10 @@ XGBoost achieved:
 	•	src/data_preprocessing.py
 	•	src/model_training.py
 	•	src/model_evaluation.py
-	
+
+import pickle
+model = pickle.load(open("model/xgboost_final_model.sav", "rb"))
+pip install -r requirements.txt	
 ---
 
 ## 🎯 7. Selected Algorithm: XGBoost
@@ -121,12 +124,9 @@ XGBoost performs best due to:
 
 ---
 
-## 🎯 10. Saving & Loading the Final Model
-
-The trained model is exported as:
-Load the model:
-
-```python
-import pickle
-model = pickle.load(open("model/xgboost_final_model.sav", "rb"))
-pip install -r requirements.txt
+## 🎯 10. Project Assets
+| File | Description |
+|------|-------------|
+| [📘 Presentation PDF](assets/California_Housing_Presentation.pdf) | Final presentation slides for stakeholders |
+| [🐍 CAPSS3 Notebook](notebook/CAPSS3.ipynb) | End-to-end analysis & model training in Python |
+| [💾 Final Model .sav](model/xgboost_final_model.sav) | Serialized XGBoost model ready for loading |
