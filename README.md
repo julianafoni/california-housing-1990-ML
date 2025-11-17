@@ -18,27 +18,46 @@ Deliverables:
 
 ## 🎯 2. Business Problem
 California’s housing market is historically shaped by:
-	•	Income inequality
-	•	Coastal land scarcity
-	•	Population density differences
-	•	Housing structure disparities
-  
-
-
-This is a **regression modeling** project using:
-
-- Linear Regression  
-- KNN Regressor  
-- Decision Tree  
-- Random Forest  
-- Gradient Boosting  
-- LightGBM  
-- **XGBoost (Best Performing Model)**  
+- Income inequality
+- Coastal land scarcity
+- Population density differences
+- Housing structure disparities
+Stakeholders (urban planners, policymakers, researchers) require a data-driven model to understand which factors most strongly influence housing values.
+### Problem Statement
+“Given district-level housing and demographic indicators, how can we predict median house value and identify the most influential socioeconomic and geographic factors?”
 
 ---
 
-## 📊 4. Evaluation Metrics
+## 🎯 3. Project Objectives
+1. Develop a regression model to predict 1990 median house values.
+2. Identify key predictors (income, age of houses, geography, population density).
+3. Build a reusable ML pipeline for future datasets (2000–2025).
+4. Translate model findings into policy-oriented insights.
+5. Export a production-ready ML model for simulation and forecasting.
 
+---
+
+## 🎯 4. Analytical Approach
+This is a **supervised regression** project.
+**Models Tested**
+- Linear Regression (baseline)
+- KNN Regressor
+- Decision Tree Regressor
+- Gradient Boosting Regressor
+- Random Forest Regressor
+- LightGBM
+- XGBoost (best-performing model)
+**Pipeline Stages**
+- Preprocessing
+- Feature engineering
+- Model training
+- Cross-validation
+- Evaluation
+- Model exporting
+
+---
+
+## 🎯 5. Evaluation Metrics
 - RMSE (Root Mean Square Error)  
 - MAE (Mean Absolute Error)  
 - R² Score  
@@ -52,49 +71,47 @@ XGBoost achieved:
 
 ---
 
-## 🛠 5. Preprocessing Steps
+## 🎯 6. Preprocessing Steps
+| Step                     | Description                                                    |
+|-------------------------|----------------------------------------------------------------|
+| Handle missing values   | Median imputation for numeric features                         |
+| Encode categorical      | `ocean_proximity` → one-hot encoding                           |
+| Feature scaling         | StandardScaler for numeric columns                             |
+| Feature engineering     | Ratios such as `rooms_per_household`, `population_per_household` |
+| Train-test split        | 80/20                                                          |
 
-- Handling missing values  
-- One-hot encoding categorical features  
-- Creating derived ratios  
-- Scaling numeric features  
-- Train-test split  
-- Saving cleaned dataset  
-
+	•	src/data_preprocessing.py
+	•	src/model_training.py
+	•	src/model_evaluation.py
+	
 ---
 
-## 🌲 6. Selected Algorithm: XGBoost
-
+## 🎯 7. Selected Algorithm: XGBoost
 XGBoost performs best due to:
-
 - Capturing nonlinear relationships  
 - Handling interaction effects  
 - Robustness against multicollinearity  
-- Strong generalization (low CV variance)  
-
-Key hyperparameters:
-
-```python
-learning_rate=0.05
-n_estimators=300
-max_depth=6
-colsample_bytree=0.8
-subsample=0.8
-random_state=42```
+- Strong generalization (low CV variance)
+	* _learning_rate = 0.05
+ 	* n_estimators = 300
+	* max_depth = 6
+	* colsample_bytree = 0.8
+	* subsample = 0.8
+	* random_state = 42_
 
 ---
 
-## 🧾 7. Key Findings
+## 🎯 8. Key Findings
 
-- Median income consistently appears as the strongest predictor of housing value.
-- Geographic coordinates (longitude, latitude) capture coastal–inland inequality.
+- **Median income** consistently appears as the strongest predictor of housing value.
+- Geographic coordinates **(longitude, latitude)** capture coastal–inland inequality.
 - Population density metrics correlate with lower prices.
-- Older housing stock can indicate more valuable historic neighborhoods.
-- The housing market already exhibited nonlinear structures as early as 1990.
+- **Older housing stock** can indicate more valuable historic neighborhoods.
+- The 1990 housing market was already **highly nonlinear**, making tree-based models ideal.
 
 ---
 
-## 🏛 8. Policy Recommendations
+## 🎯 9. Policy Recommendations
 
 - Introduce income-targeted housing subsidies.
 - Reform coastal zoning to expand housing supply.
@@ -104,7 +121,7 @@ random_state=42```
 
 ---
 
-## 💾 9. Saving & Loading the Final Model
+## 🎯 10. Saving & Loading the Final Model
 
 The trained model is exported as:
 Load the model:
@@ -112,5 +129,4 @@ Load the model:
 ```python
 import pickle
 model = pickle.load(open("model/xgboost_final_model.sav", "rb"))
-
 pip install -r requirements.txt
