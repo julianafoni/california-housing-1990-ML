@@ -125,6 +125,6 @@ XGBoost performs best due to:
 ## 🎯 10. Project Assets
 | File | Description |
 |------|-------------|
-| [📘 Presentation PDF](assets/California Housing Price Prediction (1990 Baseline).pdf) | Final presentation slides for stakeholders |
-| [🐍 CAPSS3 Notebook](notebook/CAPS3.ipynb) | End-to-end analysis & model training in Python |
-| [💾 Final Model .sav](model/xgboost_final_model.sav) | Serialized XGBoost model ready for loading |
+|[📘 Presentation PDF](assets/California%20Housing%20Price%20Prediction%20(1990%20Baseline).pdf) | Final presentation slides for stakeholders |
+| [📓 Jupyter Notebook (CAPS3)](notebook/CAPS3.ipynb) | End-to-end analysis & model training in Python |
+[💾 Final Model (.sav)](model/xgboost_final_model.sav) | Serialized XGBoost model ready for loading |
