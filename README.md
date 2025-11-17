@@ -123,8 +123,12 @@ XGBoost performs best due to:
 ---
 
 ## 🎯 10. Project Assets
-| File | Description |
-|------|-------------|
-[📓 Notebook (CAPSS3.ipynb)](https://github.com/julianafoni/california-housing-1990-ML/blob/main/notebook/CAPSS3.ipynb) | Final presentation slides for stakeholders |
-| [📓 Jupyter Notebook (CAPS3)](notebook/CAPS3.ipynb) | End-to-end analysis & model training in Python |
-[💾 Final Model (.sav)](model/xgboost_final_model.sav) | Serialized XGBoost model ready for loading |
+## 📄 Project Assets
+
+Berikut adalah aset penting yang digunakan dalam proyek ini:
+
+| File | Deskripsi |
+|------|-----------|
+| [📘 Presentation PDF](California%20Housing%20Price%20Prediction%20(1990%20Baseline).pdf) | Final stakeholder presentation |
+| [📓 Jupyter Notebook (CAPS3.ipynb)](CAPS3.ipynb) | Notebook lengkap berisi seluruh proses analisis & modelling |
+| [💾 Final XGBoost Model (.sav)](xgboost_final_model.sav) | Model machine learning hasil training |
