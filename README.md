@@ -47,6 +47,7 @@ This is a **supervised regression** project.
 - Random Forest Regressor
 - LightGBM
 - XGBoost (best-performing model)
+  
 **Pipeline Stages**
 - Preprocessing
 - Feature engineering
@@ -124,6 +125,6 @@ XGBoost performs best due to:
 ## 🎯 10. Project Assets
 | File | Description |
 |------|-------------|
-| [📘 Presentation PDF](assets/California_Housing_Presentation.pdf) | Final presentation slides for stakeholders |
-| [🐍 CAPSS3 Notebook](notebook/CAPSS3.ipynb) | End-to-end analysis & model training in Python |
+| [📘 Presentation PDF](assets/California Housing Price Prediction (1990 Baseline).pdf) | Final presentation slides for stakeholders |
+| [🐍 CAPSS3 Notebook](notebook/CAPS3.ipynb) | End-to-end analysis & model training in Python |
 | [💾 Final Model .sav](model/xgboost_final_model.sav) | Serialized XGBoost model ready for loading |
